@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Details</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .header .logo {
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Passenger Details Section */
+        .passenger-details {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .passenger-details .heading {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .btn {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: #555;
+        }
+
+        /* Dynamic Passenger Inputs */
+        .passenger-input {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #fafafa;
+        }
+
+        .passenger-input h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .passenger-input label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .passenger-input input,
+        .passenger-input select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .passenger-input input[type="number"]::-webkit-inner-spin-button,
+        .passenger-input input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none; /* Remove number input spin buttons in WebKit browsers */
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-hiking"></i> Roamwing</a>
+    </header>
+
+    <section class="passenger-details">
+        <div class="container">
+            <h2 class="heading">Enter Passenger Details</h2>
+            <form id="passenger-form">
+                <div class="form-group">
+                    <label for="num-passengers">Number of Passengers:</label>
+                    <input type="number" id="num-passengers" name="num-passengers" min="1" required>
+                </div>
+                <div id="passenger-details-container"></div>
+                <button type="submit" class="btn">Submit Details</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Retrieve booking information from sessionStorage
+        const fromLocation = sessionStorage.getItem('fromLocation');
+        const toLocation = sessionStorage.getItem('toLocation');
+        const travelDate = sessionStorage.getItem('travelDate');
+
+        // Log the retrieved data for debugging
+        console.log('From:', fromLocation);
+        console.log('To:', toLocation);
+        console.log('Date:', travelDate);
+
+        // Generate passenger detail inputs based on the number of passengers
+        document.getElementById('num-passengers').addEventListener('change', (e) => {
+            const numPassengers = parseInt(e.target.value);
+            const container = document.getElementById('passenger-details-container');
+            container.innerHTML = ''; // Clear previous passenger details
+
+            for (let i = 0; i < numPassengers; i++) {
+                const passengerDiv = document.createElement('div');
+                passengerDiv.className = 'passenger-input';
+                passengerDiv.innerHTML = `
+                    <h3>Passenger ${i + 1}</h3>
+                    <div class="form-group">
+                        <label for="passenger-name-${i}">Name:</label>
+                        <input type="text" id="passenger-name-${i}" name="passenger-name-${i}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passenger-age-${i}">Age:</label>
+                        <input type="number" id="passenger-age-${i}" name="passenger-age-${i}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passenger-contact-${i}">Contact Number:</label>
+                        <input type="text" id="passenger-contact-${i}" name="passenger-contact-${i}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passenger-email-${i}">Email ID:</label>
+                        <input type="email" id="passenger-email-${i}" name="passenger-email-${i}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passenger-gender-${i}">Gender:</label>
+                        <select id="passenger-gender-${i}" name="passenger-gender-${i}" required>
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                `;
+                container.appendChild(passengerDiv);
+            }
+        });
+
+        // Handle form submission
+        document.getElementById('passenger-form').onsubmit = (e) => {
+            e.preventDefault();
+            // Handle form submission logic here
+            alert('Passenger details submitted!');
+            window.location.href = 'index.html'; // Redirect to index.html or any other page
+        };
+    </script>
+</body>
+</html>

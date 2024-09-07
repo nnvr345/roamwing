@@ -1,0 +1,997 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+section {
+  padding: 5rem 9%;
+}
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border: 0.2rem solid black;
+  color: black;
+  cursor: pointer;
+  background: none;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  border-radius: 40px;
+}
+.btn:hover {
+  background: black;
+  color: white;
+}
+.heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 4rem;
+  color: #10221b;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 9%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+.header.active {
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.header .logo {
+  margin-right: auto;
+  font-size: 2.5rem;
+  color: black;
+  font-weight: bolder;
+}
+.wrapper1 {
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 550px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.wrapper1 .title1 h1 {
+  color: blue;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 3.5rem;
+}
+
+.contact-form {
+  display: flex;
+}
+
+.uil {
+  height: 50px;
+  width: 50px;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+
+.input-fields,
+.msg {
+  width: 60%;
+}
+
+.input-fields .input,
+.msg textarea {
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid #5f66618f;
+  padding: 10px;
+  color: black;
+  width: 100%;
+}
+
+.msg textarea {
+  height: 189px;
+}
+.msg .btn1 {
+  margin-top: 1rem;
+  display: inline-block;
+  border: 0.2rem solid blue;
+  color: black;
+  cursor: pointer;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  border-radius: 40px;
+  background: none;
+}
+.btn1 button[type="submit"] {
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+i {
+  color: blue;
+}
+
+.header .navbar a {
+  margin-left: 2rem;
+  font-size: 1.7rem;
+  color: black;
+}
+.header .navbar a:hover {
+  color: blue;
+}
+.header .navbar #nav-close {
+  font-size: 5rem;
+  cursor: pointer;
+  color: black;
+  display: none;
+}
+.header .icons a,
+.header .icons div {
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+  color: black;
+}
+
+.header.icons a:hover,
+.header.icons div:hover {
+  color: blue;
+}
+.header #menu-btn {
+  display: none;
+}
+
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transform: translateY(-110%);
+}
+
+.search-form.active {
+  transform: translateY(0%);
+}
+
+#close-search {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  cursor: pointer;
+  color: white;
+  font-size: 5rem;
+}
+#close-search:hover {
+  color: blue;
+}
+
+form {
+  width: 90vw;
+  margin: 0 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 0.2rem solid white;
+  display: flex;
+  align-items: center;
+}
+form input {
+  width: 100%;
+  font-size: 2rem;
+  color: white;
+  text-transform: none;
+  background: none;
+  padding-right: 2rem;
+}
+
+form input::placeholder {
+  color: #aaa;
+}
+
+form label {
+  font-size: 3rem;
+  cursor: pointer;
+  color: white;
+}
+form label:hover {
+  color: blue;
+}
+.home {
+  padding: 0;
+}
+.home .box {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover !important;
+  background-position: center !important;
+  justify-content: flex-end;
+  padding: 2rem 9%;
+}
+
+.home .content {
+  width: 50rem;
+}
+.home .content span {
+  font-size: 4rem;
+  color: black;
+}
+.home .content h3 {
+  font-size: 6rem;
+  color: blue;
+  padding-top: 0.5rem;
+  text-transform: uppercase;
+}
+.home .content p {
+  line-height: 2;
+  color: black;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.category .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(29rem, 1fr)) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+  gap: 1.5rem;
+}
+
+.category .box-container .box {
+  text-align: center;
+  padding: 1rem;
+}
+.category .box-container .box img {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 1px 2px 6px 3px grey;
+}
+.category .box-container .box h3 {
+  font-size: 2rem;
+  background: linear-gradient(to right, white);
+
+}
+
+.category .box-container .box p {
+  font-size: 1.5rem;
+  color: #10221b;
+  padding: 1rem 0;
+  line-height: 2;
+}
+.packages {
+  background: #eee;
+}
+
+.packages .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(32rem, 1fr)) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 1.5rem;
+}
+.faq {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.faq .heading {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+}
+
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.faq-box {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-box h3 {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+.faq-box p {
+  font-size: 1.1em;
+  color: #666;
+  line-height: 1.6;
+}
+
+.packages .box-container .box {
+  text-align: center;
+  background: #fff;
+  border: 0.2rem solid #10221b;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.packages .box-container .box:hover {
+  background: #10221b;
+}
+
+.packages .box-container .box:hover .content > * {
+  color: #fff;
+}
+
+.packages .box-container .box:hover .btn {
+  border-color: #fff;
+}
+
+.packages .box-container .box:hover .btn:hover {
+  background: #fff;
+  color: #10221b;
+}
+
+.packages .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+  padding: 2rem;
+  padding-bottom: 0;
+  border-radius: 0.5rem;
+}
+
+.packages .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.packages .box-container .box .content {
+  padding: 2rem;
+}
+
+.packages .box-container .box .content h3 {
+  font-size: 2rem;
+  color: #10221b;
+}
+
+.packages .box-container .box .content p {
+  font-size: 1.5rem;
+  color: #10221b;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.packages .box-container .box .content .price {
+  font-size: 2rem;
+  color: #219150;
+}
+
+.footer {
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0.5))
+    ),
+    url(../images/footer-bg.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/footer.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.footer .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr)) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2rem;
+  padding: 1.5rem 0;
+  color: #fff;
+}
+
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.4rem;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.footer .box-container .box a i {
+  color: #219150;
+  padding-right: 0.5rem;
+}
+
+.footer .box-container .box a:hover {
+  color: #219150;
+}
+
+.footer .box-container .box a:hover i {
+  padding-right: 2rem;
+}
+
+.footer .credit {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 1rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.footer .credit span {
+  color: #219150;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .home .box {
+    padding: 2rem;
+    justify-content: center;
+    background-position: right !important;
+  }
+  .home .box .conent {
+    text-align: center;
+  }
+  .home .box .conent span {
+    font-size: 3rem;
+  }
+  .home .box .conent h3 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: fixed;
+    top: 0;
+    left: -110%;
+    background: white;
+    z-index: 10000;
+    width: 35rem;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header .navbar.active {
+    left: 0;
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+  }
+  .header .navbar a {
+    margin: 1rem 0;
+    font-size: 3rem;
+  }
+  .header .navbar #nav-close {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+  .contact-form {
+    flex-direction: column;
+  }
+  .msg textarea {
+    height: 80px;
+  }
+  .input-fields,
+  .msg {
+    width: 100%;
+  }
+  .input, textarea {
+    width: 60vw !important;
+  }
+  .msg {
+    margin-left: -20px;
+  }
+  form {
+    flex-direction: column;
+    width: 70vw;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .heading {
+    font-size: 3rem;
+  }
+    .input, textarea {
+    width: 70vw !important;
+  }
+  form {
+    width: 50vw;
+  }
+  .wrapper1 {
+    padding: 10px;
+  }
+}
+/* General styling for Privacy Policy and Terms of Use pages */
+.terms, .privacy-policy {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px; /* Increased padding for better spacing */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+}
+
+h1 {
+  font-size: 2.8em; /* Increased font size for main heading */
+  margin-bottom: 20px;
+  color: black;
+}
+
+h2 {
+  font-size: 2em; /* Increased font size for sub-headings */
+  margin-top: 20px;
+  color: black;
+}
+
+p {
+  font-size: 1.2em; /* Slightly larger font size for paragraphs */
+  color: black;
+  line-height: 1.8; /* Increased line height for better readability */
+}
+
+/* Header and footer styling */
+header, footer {
+  background-color: white;
+  color: #fff;
+  padding: 15px 0; /* Increased padding for better spacing */
+  text-align: center;
+}
+
+.navbar, .footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Increased gap between navigation links */
+}
+
+.navbar a, .footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em; /* Increased font size for better readability */
+}
+
+.navbar a:hover, .footer-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Add a border or underline to indicate active page */
+.navbar a.active, .footer-nav a.active {
+  border-bottom: 2px solid #fff;
+}
+/* Booking Form Section */
+.booking {
+  padding: 0;
+  background-color: white;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+.booking .heading {
+  text-align: center;
+  font-size: 3em; /* Increased font size */
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.booking-form {
+  width: 100%;
+  max-width: 600px; /* Max width for better readability */
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-size: 1.2em; /* Increased font size */
+  color: #444;
+  margin-bottom: 10px;
+  display: block;
+  font-weight: 600;
+}
+
+.form-group select,
+.form-group input[type="date"] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.1em; /* Increased font size */
+  color: #555;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+.form-group select:focus,
+.form-group input[type="date"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.booking-form button {
+  width: 100%;
+  background: #007bff;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5em; /* Increased font size */
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.booking-form button:hover {
+  background: #0056b3;
+}
+
+/* Details Page Styling */
+.details {
+  padding: 0;
+  background-color: #f5f5f5;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+.details h2 {
+  text-align: center;
+  font-size: 2.5em; /* Increased font size */
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.details-form {
+  width: 100%;
+  max-width: 500px; /* Max width for better readability */
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.details-form .form-group {
+  margin-bottom: 20px;
+}
+
+.details-form .form-group label {
+  font-size: 1.2em; /* Increased font size */
+  color: #444;
+  margin-bottom: 10px;
+  display: block;
+  font-weight: 600;
+}
+
+.details-form input[type="text"],
+.details-form input[type="email"],
+.details-form input[type="tel"],
+.details-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.1em; /* Increased font size */
+  color: #555;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+.details-form input[type="text"]:focus,
+.details-form input[type="email"]:focus,
+.details-form input[type="tel"]:focus,
+.details-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.details-form button {
+  width: 100%;
+  background: #007bff;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5em; /* Increased font size */
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.details-form button:hover {
+  background: #0056b3;
+}
+.booking {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.booking-options {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.booking-options .btn {
+  margin: 0 10px;
+}
+
+.booking-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form .form-group {
+  margin-bottom: 15px;
+}
+
+.booking-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.booking-form .form-group input,
+.booking-form .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Ensures the submit button is positioned below the form fields */
+.booking-form button {
+  margin-top: 20px; /* Adds space between the fields and the button */
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.booking-form button:hover {
+  background-color: #555;
+}
+.form-group {
+  margin-bottom: 15px; /* Space between form fields */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button.btn1 {
+  margin-top: 20px; /* Space between form fields and button */
+  padding: 10px 20px; /* Adjust the size of the button */
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em; /* Adjust font size */
+  cursor: pointer;
+  align-self: flex-start; /* Align the button to the left or center as needed */
+}
+
+button.btn1:hover {
+  background-color: #555;
+}
+
+/* Styles for Submit Button in Booking Section */
+.booking-form .btn-submit {
+    background-color: #333;  /* Button background color */
+    color: #fff;  /* Button text color */
+    border: none;  /* Remove border */
+    padding: 10px 20px;  /* Button padding */
+    font-size: 16px;  /* Font size */
+    border-radius: 5px;  /* Rounded corners */
+    cursor: pointer;  /* Cursor change on hover */
+    display: inline-block;  /* Inline block display */
+    margin-top: 30px;  /* Increased margin-top for spacing */
+    transition: background-color 0.3s ease;  /* Transition for hover effect */
+}
+
+.booking-form .btn-submit:hover {
+    background-color: #555;  /* Hover background color */
+}
+/* Contact Us Section */
+/* Contact Us Section */
+.contact-us {
+  padding: 80px 20px;
+  background-color: #f0f2f5; /* Soft background color */
+  font-family: 'Roboto', sans-serif;
+}
+
+.contact-us .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-us .heading {
+  text-align: center;
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 25px;
+}
+
+.contact-form .form-group label {
+  display: block;
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  color: #333;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.contact-form button {
+  background: #007bff;
+  color: #ffffff;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.contact-form button:active {
+  background: #003d7a;
+  transform: translateY(0);
+}
+
+.contact-form .form-group .form-text {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.contact-form .form-group .form-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-form .form-group .form-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form .form-group {
+    margin-bottom: 20px;
+  }
+}
